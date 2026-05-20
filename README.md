@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Lumina Forecast 🌌
 
 **Lumina Forecast** is a premium, industrial-grade Product Demand Forecasting & Inventory Volatility SaaS platform. It combines a visually breathtaking, high-fidelity React dashboard (reminiscent of Linear, Apple, and Arc Browser styling) with a fast, lightweight FastAPI Python backend backed by an SQLite relational storage layer.
@@ -140,3 +141,6 @@ Make sure you have the following installed on your machine:
 - On the **Landing Page**, click **"Access Free Sandbox"** or **"Console Access"** to sign in automatically with a seeded guest quantitative analyst dashboard!
 - Try adjusting horizon ranges, inputting marketing spends, enabling seasonality switches, or loading a mock CSV file to observe the Recharts line update dynamically with confidence bands.
 - Explore the **Stock Volatility** quantitatively or browse the **Profile Hub** to audit your console operations and reload previous runs!
+=======
+# Product-Demand-Forecasting01
+>>>>>>> c8eeff28ca4f599e60b7587bab2ff23931c085ff
