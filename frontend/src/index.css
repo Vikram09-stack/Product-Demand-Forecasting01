@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Strict high-contrast color scheme settings */
+  html {
+    color-scheme: light;
+    scroll-behavior: smooth;
+  }
+  
+  html.dark {
+    color-scheme: dark;
+  }
+
+  /* Solid pure white background in light mode */
+  body {
+    background-color: #ffffff;
+    color: #0f172a; /* slate-900 */
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    min-height: 100vh;
+  }
+
+  /* Solid pitch black background in dark mode, strictly zero glowing noise */
+  html.dark body {
+    background-color: #030303;
+    color: #f8fafc; /* slate-50 */
+  }
+}
+
+/* Custom minimal scrollbar matching high-end developer IDEs */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 9999px;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(79, 70, 229, 0.4); /* subtle blue-violet highlight */
+}
+
+/* Solid Uilora-Style Console Panels (Zero noise, solid colors, crisp borders) */
+.glass-panel {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0; /* slate-200 */
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.02);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html.dark .glass-panel {
+  background-color: #09090b; /* zinc-950/solid card dark */
+  border: 1px solid rgba(255, 255, 255, 0.05); /* thin subtle dark border */
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+}
+
+.glass-panel-interactive {
+  composes: glass-panel;
+}
+
+.glass-panel-interactive:hover {
+  border-color: #cbd5e1; /* slate-300 */
+  box-shadow: 0 4px 12px -2px rgba(15, 23, 42, 0.03);
+  transform: translateY(-0.5px);
+}
+
+html.dark .glass-panel-interactive:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.8);
+  transform: translateY(-0.5px);
+}
+
+/* Premium Typography Gradients (Strictly structured, high legibility) */
+.text-gradient {
+  background: linear-gradient(135deg, #0f172a 30%, #4f46e5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+html.dark .text-gradient {
+  background: linear-gradient(135deg, #ffffff 40%, #818cf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #0f172a 30%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+html.dark .text-gradient-cyan {
+  background: linear-gradient(135deg, #ffffff 40%, #22d3ee 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Uilora Sidebar Classes */
+.sidebar-link-active {
+  background-color: #f1f5f9; /* slate-100 */
+  color: #0f172a; /* slate-900 */
+}
+
+html.dark .sidebar-link-active {
+  background-color: #18181b; /* zinc-900 */
+  color: #ffffff;
+}
+
+/* Focus styles for forms in Light/Dark themes */
+.input-field {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background-color: #ffffff;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #0f172a;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.input-field:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.1);
+}
+
+html.dark .input-field {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: #09090b;
+  color: #f8fafc;
+}
+
+html.dark .input-field:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.15);
+}
