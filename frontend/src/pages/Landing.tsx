@@ -153,7 +153,7 @@ export const Landing: React.FC = () => {
             <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-slate-900 dark:text-white leading-[1.05]">
               AI Demand Forecasting.<br />
               <span className="text-[#4f46e5] dark:text-[#818cf8]">
-                Production Ready.
+                Real-Time Predictive Insights.
               </span>
             </h1>
 
